@@ -17,7 +17,7 @@ class DbTransacional:
     def run(self):
         
         self.open_conn_sqlite()
-        self.create_tables_postgre()
+        self.create_tables()
         self.insert_data()
         self.close_conn_sqlite()
 
@@ -32,7 +32,7 @@ class DbTransacional:
     def close_conn_sqlite(self):
         self.conn.close()
     
-    def create_tables_postgre(self):
+    def create_tables(self):
         
   
         cur = self.conn.cursor()
