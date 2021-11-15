@@ -15,9 +15,12 @@ Precisei fazer uma alteração no tipo de dados de pedido.dt_pedido para string 
 
 O código também usar os arquivos csv com os dados que foram disponibilizados e insere no bando de dados sqlite,  o diretório dos arquivos csv é [gerar_simulucao_db_transacional/data](https://github.com/dcarve/magalu/tree/main/gerar_simulucao_db_transacional/data)
 
-do arquivo item_pedido.csv
-removi as seguintes tuplas (linhas), porque os para essas tuplas os id_pedido não existem no arquivo pedido.csv, gerando assim uma violação de chave.
-devido a caracteristicas dos bando de dados considerarei que foi um erro.
+OBS: 
+O arquivo subcategoria.csv renomei para sub_categoria.csv, apenas para facilitar o código que cria o db transacional
+
+Quanto ao  arquivo item_pedido.csv
+removi as seguintes tuplas (linhas), porque para essas tuplas os valores de id_pedido não existem no arquivo pedido.csv, gerando assim uma violação de chave.
+Devido a caracteristicas dos bando de dados considerarei que foi um erro.
 Em uma situação real, iria entrar em contato com a área responsável, e apontar que há um problema no bando de dados e que a tabela item_pedido não foi criada com uma Foreing Key em id_pedido.
 
 |id_pedido|id_produto|quantidade|vr_unitario|
@@ -57,7 +60,47 @@ Em uma situação real, iria entrar em contato com a área responsável, e apont
 
 
 
-
+<br>
 ## data warehouse
-![image info](./MODELO.PNG)
+
+![modelo escolhido](./MODELO.PNG)
+
+Para o data Warehouse, escolhe o modelo estrela, um fato e três dimensões, 
+juntei os dados de categoria e subcategoria com produto, e cidade e estado com filial, item_pedido e parceiro juntei com pedido, quanto a cliente, não fiz alterações.
+<br>
+
+### PRODUTO (categoria, subcategoria, produto)
+
+![tabela produto](./PRODUTO.PNG)
+
+Os dados de categoria e subcategoria são dados categoricos de negócio, que provavelmente estão disponiveis por completo em outras plataformas ou em documentações e em outra forma de registro, sendo assim, trazer somente a relação de categoria e subcategoria dos produtos registrados no db é o suficiente.
+
+O ETL dessa parte, escolhe usar o método SCD tipo 2  (SCD - Slowly Changing Dimensions), e estou considerando que as mudanças desse
+
+<br>
+
+### FILIAL (cidade, estado, filial)
+
+![tabela produto](./FILIAL.PNG)
+
+.
+
+<br>
+
+### CLIENTE
+
+![tabela produto](./CLIENTE.PNG)
+
+.
+
+
+<br>
+
+### PEDIDO (item_pedido, parceiro, pedido)
+
+![tabela produto](./PEDIDO.PNG)
+
+.
+
+
 
