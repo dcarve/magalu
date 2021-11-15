@@ -59,5 +59,5 @@ Em uma situação real, iria entrar em contato com a área responsável, e apont
 
 
 ## data warehouse
-
+![image info](./MODELO.PNG)
 
