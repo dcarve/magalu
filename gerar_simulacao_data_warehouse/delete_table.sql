@@ -2,3 +2,8 @@ DROP TABLE IF EXISTS cliente;
 DROP TABLE IF EXISTS filial;
 DROP TABLE IF EXISTS pedido;
 DROP TABLE IF EXISTS produto;
+DROP TABLE IF EXISTS cliente_temp;
+DROP TABLE IF EXISTS filial_temp;
+DROP TABLE IF EXISTS pedido_temp;
+DROP TABLE IF EXISTS produto_temp;
+
