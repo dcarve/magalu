@@ -133,11 +133,14 @@ Para mais detalhes de como os ETLs foram feitos:<br>
 
 
 # Analise
+[analise/__ init __.py](https://github.com/dcarve/magalu/blob/main/analise/__init__.py)
 
 Com essa proposta de Data WareHouse para esses dados, as análises não precisa de queries muito complexas.
 
-considerar data_inicio e data_fim como sendo argumentos externos, para limitar a janela de análise.
+Considerar data_inicio e data_fim como sendo argumentos externos, para limitar a janela de análise.
 
+Adicionei '-01' à dado de ano/mes, pois assim facilita o uso do relatório em softwares de vizualiação de dados caso seak usado diretamente com o bando de dados.
+No código do python adicinei um comando para trocar para o último dia do mês. Isso poderia ter sido feito diretamente no SQL, porem o SQLITE não suporta operações com datas.
 
 ```
     with comissao as (select 
@@ -179,50 +182,51 @@ considerar data_inicio e data_fim como sendo argumentos externos, para limitar a
 ```
 
 
+#### Saída do código de analise 
 
 |total_venda|quant_itens_vendidos|comissao|ano_mes|nm_parceiro|
 |---|---|---|---|---|
-|85881,39|291|1979,62|2021-06-01|Parceiro Magalu - 01|
-|387754,64|1633|8168,55|2021-06-01|Parceiro Magalu - 03|
-|871,0|13|0,0|2021-06-01|Parceiro Magalu - 04|
-|840552,88|3336|11273,46|2021-06-01|Parceiro Magalu - 05|
-|6561490,93|15974|216382,47|2021-06-01|Parceiro Magalu - 06|
-|873,47|14|0,0|2021-06-01|Parceiro Magalu - 08|
-|202892,53|2729|2897,71|2021-06-01|Parceiro Magalu - 10|
-|20011,29|152|260,4|2021-06-01|Parceiro Magalu - 11|
-|15091469,56|89761|34334,45|2021-06-01|Parceiro Magalu - 13|
-|10852649,75|107036|110295,47|2021-06-01|Parceiro Magalu - 16|
-|58601,94|205|1340,49|2021-07-01|Parceiro Magalu - 01|
-|281321,04|1217|5931,65|2021-07-01|Parceiro Magalu - 03|
-|1726,4|27|0,0|2021-07-01|Parceiro Magalu - 04|
-|1381356,06|5542|18455,71|2021-07-01|Parceiro Magalu - 05|
-|7446263,3|17612|257045,73|2021-07-01|Parceiro Magalu - 06|
-|985,4|18|0,0|2021-07-01|Parceiro Magalu - 08|
-|264047,42|3157|3592,18|2021-07-01|Parceiro Magalu - 10|
-|21917,87|159|299,27|2021-07-01|Parceiro Magalu - 11|
-|17932213,95|111608|39194,24|2021-07-01|Parceiro Magalu - 13|
-|12160544,23|129204|124056,97|2021-07-01|Parceiro Magalu - 16|
-|10568,14|39|233,05|2021-08-01|Parceiro Magalu - 01|
-|286965,66|275|3627,55|2021-08-01|Parceiro Magalu - 03|
-|2663,05|39|0,0|2021-08-01|Parceiro Magalu - 04|
-|1445655,43|7220|20429,35|2021-08-01|Parceiro Magalu - 05|
-|8877177,07|19070|314647,2|2021-08-01|Parceiro Magalu - 06|
-|638,56|12|0,0|2021-08-01|Parceiro Magalu - 08|
-|145149,45|1846|2452,32|2021-08-01|Parceiro Magalu - 10|
-|11337,82|99|185,76|2021-08-01|Parceiro Magalu - 11|
-|16293361,74|102000|32843,61|2021-08-01|Parceiro Magalu - 13|
-|8755434,22|102714|91542,07|2021-08-01|Parceiro Magalu - 16|
-|50438,91|175|1097,53|2021-09-01|Parceiro Magalu - 01|
-|3228,49|41|0,0|2021-09-01|Parceiro Magalu - 02|
-|356059,3|350|4442,95|2021-09-01|Parceiro Magalu - 03|
-|962,0|13|0,0|2021-09-01|Parceiro Magalu - 04|
-|819679,46|3611|12097,65|2021-09-01|Parceiro Magalu - 05|
-|4751385,35|9875|168383,32|2021-09-01|Parceiro Magalu - 06|
-|116,22|2|0,0|2021-09-01|Parceiro Magalu - 08|
-|143512,02|2107|2542,44|2021-09-01|Parceiro Magalu - 10|
-|10092,03|90|157,53|2021-09-01|Parceiro Magalu - 11|
-|8027515,35|44932|17973,34|2021-09-01|Parceiro Magalu - 13|
-|4195082,73|50482|44011,61|2021-09-01|Parceiro Magalu - 16|
+|85881,39|291|1979,62|2021-06-30|Parceiro Magalu - 01|
+|387754,64|1633|8168,55|2021-06-30|Parceiro Magalu - 03|
+|871,0|13|0,0|2021-06-30|Parceiro Magalu - 04|
+|840552,88|3336|11273,46|2021-06-30|Parceiro Magalu - 05|
+|6561490,93|15974|216382,47|2021-06-30|Parceiro Magalu - 06|
+|873,47|14|0,0|2021-06-30|Parceiro Magalu - 08|
+|202892,53|2729|2897,71|2021-06-30|Parceiro Magalu - 10|
+|20011,29|152|260,4|2021-06-30|Parceiro Magalu - 11|
+|15091469,56|89761|34334,45|2021-06-30|Parceiro Magalu - 13|
+|10852649,75|107036|110295,47|2021-06-30|Parceiro Magalu - 16|
+|58601,94|205|1340,49|2021-07-31|Parceiro Magalu - 01|
+|281321,04|1217|5931,65|2021-07-31|Parceiro Magalu - 03|
+|1726,4|27|0,0|2021-07-31|Parceiro Magalu - 04|
+|1381356,06|5542|18455,71|2021-07-31|Parceiro Magalu - 05|
+|7446263,3|17612|257045,73|2021-07-31|Parceiro Magalu - 06|
+|985,4|18|0,0|2021-07-31|Parceiro Magalu - 08|
+|264047,42|3157|3592,18|2021-07-31|Parceiro Magalu - 10|
+|21917,87|159|299,27|2021-07-31|Parceiro Magalu - 11|
+|17932213,95|111608|39194,24|2021-07-31|Parceiro Magalu - 13|
+|12160544,23|129204|124056,97|2021-07-31|Parceiro Magalu - 16|
+|10568,14|39|233,05|2021-08-31|Parceiro Magalu - 01|
+|286965,66|275|3627,55|2021-08-31|Parceiro Magalu - 03|
+|2663,05|39|0,0|2021-08-31|Parceiro Magalu - 04|
+|1445655,43|7220|20429,35|2021-08-31|Parceiro Magalu - 05|
+|8877177,07|19070|314647,2|2021-08-31|Parceiro Magalu - 06|
+|638,56|12|0,0|2021-08-31|Parceiro Magalu - 08|
+|145149,45|1846|2452,32|2021-08-31|Parceiro Magalu - 10|
+|11337,82|99|185,76|2021-08-31|Parceiro Magalu - 11|
+|16293361,74|102000|32843,61|2021-08-31|Parceiro Magalu - 13|
+|8755434,22|102714|91542,07|2021-08-31|Parceiro Magalu - 16|
+|50438,91|175|1097,53|2021-09-30|Parceiro Magalu - 01|
+|3228,49|41|0,0|2021-09-30|Parceiro Magalu - 02|
+|356059,3|350|4442,95|2021-09-30|Parceiro Magalu - 03|
+|962,0|13|0,0|2021-09-30|Parceiro Magalu - 04|
+|819679,46|3611|12097,65|2021-09-30|Parceiro Magalu - 05|
+|4751385,35|9875|168383,32|2021-09-30|Parceiro Magalu - 06|
+|116,22|2|0,0|2021-09-30|Parceiro Magalu - 08|
+|143512,02|2107|2542,44|2021-09-30|Parceiro Magalu - 10|
+|10092,03|90|157,53|2021-09-30|Parceiro Magalu - 11|
+|8027515,35|44932|17973,34|2021-09-30|Parceiro Magalu - 13|
+|4195082,73|50482|44011,61|2021-09-30|Parceiro Magalu - 16|
 
 <br>
 
