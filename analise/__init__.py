@@ -58,6 +58,6 @@ def run(data_inicio,  data_fim ):
     
     df['ano_mes'] = df.apply(lambda row:   row['ano_mes'] + relativedelta(months=1) - dt.timedelta(days=1), axis=1)
     
-    df.to_csv('relatorio_final.csv', index=False, sep=';', decimal=',')
+    df.to_csv('analise/relatorio_final.csv', index=False, sep=';', decimal=',')
     
     return df
