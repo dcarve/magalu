@@ -25,6 +25,8 @@ removi as seguintes tuplas (linhas), porque para essas tuplas os valores de id_p
 Devido a caracteristicas dos bando de dados considerarei que foi um erro.
 Em uma situação real, iria entrar em contato com a área responsável, e apontar que há um problema no bando de dados e que a tabela item_pedido não foi criada com uma Foreing Key em id_pedido.
 
+Não coloquei o arquivo pedido.csv no git, pois ele é muito grande, mas o arquivo tem que estar em gerar_simulucao_db_transacional/data
+
 |id_pedido|id_produto|quantidade|vr_unitario|
 |---|---|---|---|
 |49380480716|4102853|1|90.87|
