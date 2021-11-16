@@ -243,6 +243,8 @@ Pensar em uma métrica para o comissionamento foi algo difícil, não saber quai
 
 Se for o caso de todos os produtos forem vendido e entregues pelo parceiro, não consegui pensar que fatores podem ser relevantes para avaliar se o comissionamento esta sendo razoavel ou não. Calcular somente o percentual total mensal e comprar entre os parceiros pode não dizer muita coisa, se os parceiros trabalham com segmentos diferentes, tendo categorias de produtos diferentes. Também é possivel que haja depois parceiros que vendam produtos com as mesmas categorias, mas com variação nos volumes.
 
+Quanto aos parceiros que vendem um volume baixo, o quanto é vantajoso mantê-los na plataforma, devido ao custo operacional e comissão zerada, mais isso pode ser justificado por decisão de negócio para promover o marketplace e atrair futuros parceiros.
+
 Em resumo, somente com o valor final do comissionamento não é possivel propor algo sem conhecer mais detalhes sobre o negócio.
 
 
