@@ -131,6 +131,9 @@ Juntei os dados de parceiro, apenas por conveniência, pois não há mais inform
 Para mais detalhes de como os ETLs foram feitos:<br>
 [etl/__ init __.py](https://github.com/dcarve/magalu/blob/main/etl/__init__.py)
 
+#### OBS:
+Em todas as dimensões,  quando é primeira vez  que um novo id_cliente, id_produto, id_filial é adcionado na base, a dt_carga é definida como '1900-01-01', para indicar que essa é a primeira versão daquela informação, as demais vezes em que o dado for alterado e adicionado, dt_carga recebe a data do sistema.
+
 
 # Analise
 [analise/__ init __.py](https://github.com/dcarve/magalu/blob/main/analise/__init__.py)
