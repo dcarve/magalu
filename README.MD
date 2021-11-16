@@ -248,7 +248,7 @@ Se for o caso de todos os produtos forem vendidos e entregues pelo parceiro, nã
 
 Quanto aos parceiros que vendem um volume baixo, o quanto é vantajoso mantê-los na plataforma, devido ao custo operacional e comissão zerada, mais isso pode ser justificado por decisão de negócio para promover o marketplace e atrair futuros parceiros.  
 
-Em resumo, somente com o valor final do comissionamento não é possível propor algo sem conhecer mais detalhes sobre o negócio.
+Em resumo, somente com o valor final do comissionamento não consegui propor algo substâncial sem conhecer mais detalhes sobre o negócio.
 
 
 
