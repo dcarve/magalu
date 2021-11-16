@@ -1,7 +1,8 @@
 # Magalu
 
 
-Para simular o ETL, precisei pensar numa forma de simular algum tipo de arquitetura, então usei SQLITE para simular o banco de dados transacional e o data warehouse
+Para simular o ETL, precisei pensar numa forma de simular algum tipo de arquitetura, então usei SQLITE para simular o banco de dados transacional e o data warehouse.
+Escolhi SQLITE pois é de fácil uso e não exige um arquitetura completa, o que para o desafio é uma otima opção.
 
 ## Transacional: 
 
