@@ -91,11 +91,11 @@ E adicionei uma coluna chamada dt_carga, para ajudar no monitoramento das altera
 
 ![tabela produto](./FILIAL.PNG)
 
-Nessa parte, não é necessário guardar informação de cidades que não tem filial,  pois essa infomação não contribui diretamente para o negócio, a mesma questão para estado.
+Nessa parte, não é necessário guardar informação de cidades que não tem filial, pois essa infomação não contribui diretamente para o negócio, a mesma questão para estado.
 
 O ETL dessa parte tbm é um SCD tipo 2, tendo uma frequência até menor, já que alterações de endereço de filial não mudam com frequência, e as informações de ds_filial é contraproducente tem alterações frequêntes, esse job pode ser mensal.
 
-Da mesma forma que a tabela PRODUTO, foram adicionados as colunas id_dw_filial e dt_carga
+Da mesma forma que a tabela PRODUTO, foram adicionadas as colunas id_dw_filial e dt_carga
 
 <br>
 
@@ -105,7 +105,7 @@ Da mesma forma que a tabela PRODUTO, foram adicionados as colunas id_dw_filial e
 
 Cliente não realizei nenhuma alteração em particular, além da adicão de id_dw_cliente e dt_carga.
 
-Essa tabela tbm usa SCD tipo 2,  considerei que o job desse etl também possa der diário
+Essa tabela tbm usa SCD tipo 2, considerei que o job desse etl também possa der diário
 
 
 <br>
@@ -118,11 +118,11 @@ A tabela Pedido não será um SCD, pois os dados já possuem uma data para ser u
 O Job desse ETL pode ter uma frequência maior, a cada 6h, 8h,  pois a frequência de novos dados de compra/venda são bem maiores.
 
 Em pedido, substui as colunas id_filial, id_cliente e id_produto, para id_dw_filial, id_dw_cliente e  id_dw_produto.
-Assim a tabela PEDIDO pode ser usada com um join mais simples, usando diretamente o dados mais recentes das tabelas dimensões
+Assim a tabela PEDIDO pode ser usada com um join mais simples, usando diretamente oa dados mais recentes das tabelas dimensões
 
 Juntei nessa tabela os dados de item_pedido, pois é possível que um parceiro resolva fazer uma oferta relâmpago de duração limitada, de poucas horas, então os dados de item_pedido também teriam que ser tão tempestivos quanto aos dados do pedido. Com essa junção, removi a coluna vr_total_pago, já que o valor ficaria duplicado, e haverá a coluna vr_unitario, se houvesse dados de desconto ou cumpom,  eu manteria a informação.
 
-Juntei os dados de parceiro, apenas por conveniência, pois não há mais informações na tabela parceiro, caso houve, a deixaria como dimensão e da mesma forma que as tabelas FILIAL, CLIENTE E PRODUTO.
+Juntei os dados de parceiro, apenas por conveniência, pois não há mais informações na tabela parceiro, caso houvesse, a deixaria como dimensão e da mesma forma que as tabelas FILIAL, CLIENTE E PRODUTO.
 
 
 Para mais detalhes de como os ETLs foram feitos:<br>
@@ -131,7 +131,7 @@ Para mais detalhes de como os ETLs foram feitos:<br>
 
 # Analise
 
-Com essa proposta de Data WareHouse para esse dados, as análises não precisa de queries muito complexas.
+Com essa proposta de Data WareHouse para esses dados, as análises não precisa de queries muito complexas.
 
 considerar data_inicio e data_fim como sendo argumentos externos, para limitar a janela de análise.
 
