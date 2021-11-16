@@ -234,11 +234,14 @@ No código do python adicinei um comando para trocar para o último dia do mês.
 <br>
 
 ## Métricas
-Como estou com uma limitação em ferramentas de visualização de dados, descreverei o que poderia ser feito.
 
-Para medir a performance do parceiro, iria tentar apresentar em um dash a variação mensal das vendas, do total, por categoria e por subcategoria.
+### parceiros
+Como estou com uma limitação em ferramentas de visualização de dados, descreverei o que poderia ser feito.
+Iria tentar apresentar em um dash a variação mensal das vendas, do total, por categoria e por subcategoria.
 Pois pode ser interessante saber que tipos de produtos possam estar com um crescimento de demanda, ou o que pode estar em declínio, e com isso propor que tipo de produtos podem ser alvo de alguma campanha para aumentar o interesse do público.
 
+
+### comissionamento
 Pensar em uma métrica para o comissionamento foi algo difícil, não saber quais foram as regras iniciais para propor percentual de comissão, dificulta achar uma solução pela carência de ponto de partida, pensei nas situações em que o produto é vendido pelo parceiro e entregue pela Magazine Luiza, o que gera um custo operacional o que justifica uma comissão maior, podendo assim revisar os valores de comissão se houver algum produto com custo operacional mal dimensionado.
 
 Se for o caso de todos os produtos forem vendidos e entregues pelo parceiro, não consegui pensar que fatores podem ser relevantes para avaliar se o comissionamento está sendo razoável ou não. Calcular somente o percentual total mensal e comparar entre os parceiros pode não dizer muita coisa, se os parceiros trabalham com segmentos diferentes, tendo categorias de produtos diferentes. Também é possível que haja depois parceiros que vendam produtos com as mesmas categorias, mas com variação nos volumes.
