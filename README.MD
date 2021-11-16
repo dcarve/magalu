@@ -226,4 +226,4 @@ considerar data_inicio e data_fim como sendo argumentos externos, para limitar a
 
 <br>
 
-## Metricas
+## Métricas
