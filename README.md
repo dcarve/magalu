@@ -4,7 +4,9 @@
 Para simular o ETL, precisei pensar numa forma de simular algum tipo de arquitetura, então usei SQLITE para simular o banco de dados transacional e o data warehouse
 
 ## Transacional: 
-https://github.com/dcarve/magalu/tree/main/gerar_simulucao_db_transacional
+
+[gerar_simulucao_db_transacional](https://github.com/dcarve/magalu/tree/main/gerar_simulucao_db_transacional)
+
 
 Em [__ init __.py ](https://github.com/dcarve/magalu/blob/main/gerar_simulucao_db_transacional/__init__.py), o codigo lê os arquivos [create_tables.sql](https://github.com/dcarve/magalu/blob/main/gerar_simulucao_db_transacional/create_tables.sql) e [delete_tables.sql](https://github.com/dcarve/magalu/blob/main/gerar_simulucao_db_transacional/delete_tables.sql) para deletar (caso existam as tabelas) e para criar.
 o código para deletar é apenas para facilitar o debug do código, ele pode ser retirado do código.
