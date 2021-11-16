@@ -1,6 +1,8 @@
 
 import pandas as pd
 import sqlite3
+from  dateutil.relativedelta import relativedelta
+import datetime as dt
 
 
 def run(data_inicio,  data_fim ):
@@ -50,8 +52,11 @@ def run(data_inicio,  data_fim ):
     conn = sqlite3.connect('gerar_simulacao_data_warehouse/data_warehouse.db')
     df = pd.read_sql(query, con=conn)
     
-    
 
+    
+    df['ano_mes'] = pd.to_datetime(df['ano_mes']).dt.date
+    
+    df['ano_mes'] = df.apply(lambda row:   row['ano_mes'] + relativedelta(months=1) - dt.timedelta(days=1), axis=1)
     
     df.to_csv('relatorio_final.csv', index=False, sep=';', decimal=',')
     
