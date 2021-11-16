@@ -20,6 +20,7 @@ DataWarehouse().run()
 ETL().run()
  
 #analise
+#período analisado pelo analista
 data_inicio=dt.date(2021,6,1).strftime('%Y-%m-%d')
 data_fim=(dt.date(2021,10,1)-dt.timedelta(days=1)).strftime('%Y-%m-%d')
 
